@@ -63,7 +63,7 @@ export default {
                     break;
                 }
             }
-            this.loadCart();
+            this.loadCart();    
 
         }
     },
@@ -90,7 +90,7 @@ export default {
                     </thead>
                     <tbody style="border:1px solid #ccc;border-radius:5px;">
                         <tr v-if="data_show_product_cart.length == 0">
-                            <h5 style="color:#62ab00;border:1px solid #ccc;border-radius:5px;">Không có sản phẩm nào trong giỏ hàng !</h5>
+                            <h5 style="color:black;border:1px solid #ccc;border-radius:5px;">Không có sản phẩm nào trong giỏ hàng !</h5>
                         </tr>
                         <tr v-for="(item, index) in data_show_product_cart" v-if="data_show_product_cart.length != 0">
                             <td>

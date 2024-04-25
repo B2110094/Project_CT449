@@ -131,7 +131,7 @@ export default {
 
 
     <!-- Giao diện bảng Show Sách -->
-    <table class="table" style="width:90vw;border: 1px" id="table_manageAuthor">
+    <table class="table" style="width:90vw;" id="table_manageAuthor">
         <thead>
             <tr class="table-info text-center">
                 <th scope="col">STT</th>

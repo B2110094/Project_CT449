@@ -18,13 +18,13 @@ export default {
             username: yup
                 .string()
                 .required("Phải nhập vào tên đầy đủ !")
-                .max(15, "Tối đa 15 kí tự")
-                .min(12, "Ít nhất 12 kí tự"),
+                .max(50, "Tối đa 15 kí tự")
+                .min(6, "Ít nhất 12 kí tự"),
             email: yup
                 .string()
                 .required("Email phải có giá trị.")
                 .email("Email không đúng định dạng")
-                .max(30, "Email tối đa 30 ký tự."),
+                .max(50, "Email tối đa 30 ký tự."),
             phonenumber: yup
 		.string()
 		.matches(/((09|03|07|08|05)+([0-9]{8})\b)/g,"Số điện thoại không hợp lệ.")

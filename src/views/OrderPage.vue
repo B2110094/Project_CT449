@@ -163,7 +163,7 @@ export default {
         <div class="row">
             <!-- Left_page -->
             <div class="col-lg-7">
-                <h2>NHÀ SÁCH ZBOOKS STORE</h2>
+                <h2>NHÀ SÁCH NetaBooks</h2>
                 <!-- BreadCrumb -->
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb" style="align-items: center;">
@@ -252,6 +252,10 @@ export default {
                         <span style="font-size: 20px;opacity:0.6">&nbsp</span>
                         <span style="font-size: 30px;">{{ totalCart.toLocaleString() }} đ</span>
                     </div>
+                </div>
+                <div class="row" style="display:flex;flex-wrap:nowrap;padding:20px;">
+                    <img src="/src/assets/img/QR_VCB.jpg" alt="" style="width: 250px;">
+                    <img src="/src/assets/img/QR_momo.jpg" alt="" style="width: 250px; height: 280px">
                 </div>
             </div>
         </div>

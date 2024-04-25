@@ -1,4 +1,4 @@
-import createHttp from "./http.service";
+import createHttp from "./api.service";
 
 class UserService {
   constructor() {

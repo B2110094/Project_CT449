@@ -3,7 +3,9 @@
         <div class="container" id="main_content">
             <h3>HOẠT ĐỘNG KINH DOANH</h3>
             <hr>
-            <div class="row"></div>
+            <div class="row">
+                <p style="font-size: 25px; color: red;">Chưa có hoạt động nào</p>
+            </div>
         </div>
     </div>
 </template>

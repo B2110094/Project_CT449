@@ -82,13 +82,13 @@ export default {
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top: 10px">
                 <div class="input-group mb-3" v-if="checkLogAdmin !== 'adminlogin'">
                     <form action="/" class="d-flex" style="width:500px;" @submit.prevent>
-                        <input type="text" class="form-control" placeholder="Nhập vào tên sách hoặc mô tả..." aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius:6px;"
+                        <input type="text" class="form-control" placeholder="Nhập vào tên sách" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius:6px;"
                             v-model="inputSearch">
                         <router-link v-if="inputSearch !== ''" :to="{
                             name: 'FindProduct',
                             params: { name: JSON.stringify(inputSearch) },
                         }">
-                            <button id="btn_search" type="submit" style="width:120px;height:50px;border-radius:0 6px 6px 0" @click="loadPage()">Tìm Kiếm</button>
+                            <button id="btn_search" type="submit" style="width:120px;height:50px;border-radius:0 6px 6px 0" @click="loadPage()" class="fa fa-search"></button>
                         </router-link>
                     </form>
                 </div>
@@ -135,7 +135,7 @@ export default {
             <div id="icon_cart" style="margin-right:-10px" v-if="checkLogAdmin !== 'adminlogin'">
                 <router-link to="/cartStore">
                     <i class="fa-solid fa-cart-shopping" style="color:red;position:relative">
-                        <span style="    position: absolute;border-radius: 50%;background-color: black;color: white;top: -8px;right: -6px;border-radius: 50%;padding: 2px;font-size: 15px;width: 20px;height: 20px;display: flex;align-items: center;justify-content: center;">{{ countCart }}</span></i>
+                        <span style="position: absolute;border-radius: 50%;background-color: black;color: white;top: -8px;right: -6px;border-radius: 50%;padding: 2px;font-size: 15px;width: 20px;height: 20px;display: flex;align-items: center;justify-content: center;">{{ countCart }}</span></i>
 
                 </router-link>
             </div>
@@ -146,15 +146,11 @@ export default {
     <!-- Header 2 -->
     <nav class="navbar navbar-expand-lg navbar-light" id="nav_bottom" v-if="checkLogAdmin !== 'adminlogin'">
         <div class="container" style="height: 82px;">
-            <div class="navbar-brand" href="#" style="    margin-right: 50px;
-                                                                                                                margin-left: 61px;">
+            <div class="navbar-brand" href="#" style="margin-right: 50px;margin-left: 61px;">
                 <div class="dropdown">
                     <button class="btn dropdown-toggle text-light fw-bold" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
                         style="border:2px solid white;padding:10px;z-index:10">
-                        <i class="fa-solid fa-bars"></i>
-                        &nbsp
-                        DANH MỤC SẢN PHẨM
-                    </button>
+                        <i class="fa-solid fa-bars"></i>&nbspDANH MỤC SẢN PHẨM</button>
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="list-style:none;color:black;font-size:15px">
                         <div class="container d-flex flex-column">
@@ -199,7 +195,7 @@ export default {
                 <div style="margin-left: -592px;z-index:10">
                     <ul class="nav d-flex">
                         <li class="nav-item" style="margin-right:15px;">
-                            <router-link to="/" class="text-decoration-none text-white">
+                            <router-link to="/" @click="loadPage()" class="text-decoration-none text-white">
                                 TRANG CHỦ
                             </router-link>
                         </li>
@@ -251,7 +247,7 @@ a {
 }
 
 #btn_search {
-    background-color: red;
+    background-color: black;
     color: white;
     font-weight: bold;
     border: none;

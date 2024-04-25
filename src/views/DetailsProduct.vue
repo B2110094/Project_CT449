@@ -140,12 +140,12 @@ export default {
 <template>
     <div class="container" id="main_page_detail_product">
         <!-- BreadCrumb -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" style="align-items: center;">
+        <nav aria-label="breadcrumb" style="margin-left: -70px">
+            <ol class="breadcrumb" style="align-items: center;margin-top: -20px;">
                 <li class="breadcrumb-item">
-                    <router-link to="/" style="color:#62ab00">Trang chủ</router-link>
+                    <router-link to="/" style="color:black">Trang chủ</router-link>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Chi tiết sản phẩm</li>
+                <li class="breadcrumb-item active" aria-current="page" style="color: blue;">Chi tiết sản phẩm</li>
             </ol>
         </nav>
 
@@ -160,38 +160,22 @@ export default {
                 <span @click="nextImg()" class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-            <i @click="exit()" class="fa-solid fa-xmark" style="position: absolute;
-                                                                top: 11px;
-                                                                right: 25px;
-                                                                color: white;
-                                                                font-size: 50px;
-                                                                opacity: 0.6;
-                                                                z-index:999999999999;
-                                                                cursor:pointer;"></i>
+            <i @click="exit()" class="fa-solid fa-xmark" style="position: absolute;top: 11px;right: 25px;color: white;font-size: 50px;opacity: 0.6;z-index:999999999999;cursor:pointer;"></i>
         </div>
-
 
         <!-- Detail_Product -->
         <div class="row">
             <div class="col-6">
-                <img :src="DetailProductData.img_url[0]" class="img-fluid" alt="..." width="319" height="444" style="    border: 1px solid #ccc;
-                                                                                                        border-radius: 10px;
-                                                                                                        padding: 10px;box-shadow: 1px 2px 13px 0px;margin-left:130px;">
+                <img :src="DetailProductData.img_url[0]" class="img-fluid" alt="..." width="319" height="444" style="border: 1px solid #ccc;border-radius: 10px;padding: 10px;box-shadow: 1px 2px 13px 0px;margin-left:130px;">
                 <div class="row d-flex mt-5 text-center">
                     <div class="col">
-                        <img @click="openImg(DetailProductData.img_url[0], 0)" :src="DetailProductData.img_url[0]" class="img-thumbnail img_introduce" alt="..." width="319" height="444" style="    border: 1px solid #ccc;object-fit:contain;
-                                                                                                            border-radius: 10px;
-                                                                                                            padding: 10px;box-shadow: 1px 2px 13px 0px; width:150px;height:150px;">
+                        <img @click="openImg(DetailProductData.img_url[0], 0)" :src="DetailProductData.img_url[0]" class="img-thumbnail img_introduce" alt="..." width="319" height="444" style="border: 1px solid #ccc;object-fit:contain;border-radius: 10px;padding: 8px;box-shadow: 1px 2px 13px 0px; width:120px;height:120px;margin-left: -20px;">
                     </div>
                     <div class="col">
-                        <img @click="openImg(DetailProductData.img_url[1], 1)" :src="DetailProductData.img_url[1]" class="img-thumbnail img_introduce" alt="..." width="319" height="444" style="    border: 1px solid #ccc;object-fit:contain;
-                                                                                                            border-radius: 10px;
-                                                                                                            padding: 10px;box-shadow: 1px 2px 13px 0px; width:150px;height:150px;">
+                        <img @click="openImg(DetailProductData.img_url[1], 1)" :src="DetailProductData.img_url[1]" class="img-thumbnail img_introduce" alt="..." width="319" height="444" style="border: 1px solid #ccc;object-fit:contain;border-radius: 10px;padding: 8px;box-shadow: 1px 2px 13px 0px; width:120px;height:120px;margin-right: 50px;">
                     </div>
                     <div class="col">
-                        <img @click="openImg(DetailProductData.img_url[2], 2)" :src="DetailProductData.img_url[2]" class="img-thumbnail img_introduce" alt="..." width="319" height="444" style="    border: 1px solid #ccc;object-fit:contain;
-                                                                                                            border-radius: 10px;
-                                                                                                            padding: 10px;box-shadow: 1px 2px 13px 0px; width:150px;height:150px;">
+                        <img @click="openImg(DetailProductData.img_url[2], 2)" :src="DetailProductData.img_url[2]" class="img-thumbnail img_introduce" alt="..." width="319" height="444" style="border: 1px solid #ccc;object-fit:contain;border-radius: 10px;padding: 8px;box-shadow: 1px 2px 13px 0px; width:120px;height:120px;margin-right: 160px">
                     </div>
                 </div>
             </div>
@@ -205,16 +189,15 @@ export default {
                     <p>Thể Loại: <span class="fw-bold">{{ DetailProductData.bookType }}</span></p>
                     <p>Tác giả: <span class="fw-bold">{{ DetailProductData.author }}</span></p>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-left: 340px;margin-top: -125px;">
                     <p style="border:1px solid red;;width:fit-content;border-radius:10px;padding:20px">
                         Giá bán:
                     <h1 style="color:black;">
-                        {{ DetailProductData.price.toLocaleString() }} đ
-                    </h1>
+                        {{ DetailProductData.price.toLocaleString() }} đ</h1>
                     </p>
                 </div>
                 <br>
-                <div class="row">
+                <div class="row" style="margin-left: 350px;">
                     <h5>Số lượng (<i class="fa-sharp fa-solid fa-store"></i>) :
                         <span v-if="DetailProductData.quantityonhand != 0"> {{ DetailProductData.quantityonhand }} </span>
                         <span v-else style="color:red;font-size:30px;">Đã hết hàng !</span>
@@ -228,15 +211,15 @@ export default {
                     </div>
                 </div>
 
-                <div class="row" v-if="DetailProductData.quantityonhand != 0">
-                    <p @click="addtoCart(DetailProductData.title)" id="cart_btn" style="cursor:pointer"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</p>
+                <div class="row" v-if="DetailProductData.quantityonhand != 0 ">
+                    <p @click="addtoCart(DetailProductData.title)" id="cart_btn" style="cursor:pointer; margin-left: 362px;"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</p>
                 </div>
             </div>
         </div>
 
 
         <!-- Description Product -->
-        <div class="row mt-5" id="description">
+        <div class="row mt-5" id="description" style="margin-left: 40px;">
             <h5>MÔ TẢ SẢN PHẨM</h5>
             <hr>
             <div>
@@ -248,7 +231,7 @@ export default {
 
 
         <!-- Product_Related -->
-        <div class="row mt-5" id="description">
+        <div class="row mt-5" id="description" style="margin-left: 40px;">
             <h5>SẢN PHẨM LIÊN QUAN</h5>
             <hr>
             <div class="d-flex flex-wrap">

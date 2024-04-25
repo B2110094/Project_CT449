@@ -31,7 +31,7 @@ export default {
         <div class="row">
             <!-- Left_page -->
             <div class="col-lg-5">
-                <h2> <i class="fa-regular fa-circle-check"></i> NHÀ SÁCH ZBOOKS STORE</h2>
+                <h2> <i class="fa-regular fa-circle-check"></i> NHÀ SÁCH NetaBooks</h2>
                 <!-- BreadCrumb -->
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb" style="align-items: center;">

@@ -12,7 +12,7 @@
             </div>
             <div class="d-flex align-items-center">
                 <h6 class="fw-bold">Email: </h6>
-                <span style="margin-bottom:8px; color: black">&nbsp;phucb2110094@student.ctu.edu.vn</span>
+                <span style="margin-bottom:8px; color: black">&nbsp;hotro@netabooks.vn</span>
             </div>
         </div>
         <div class="right_map col-lg-7" style="border-radius:10px; padding-left: 180px;">
